@@ -3,7 +3,6 @@ import React, { useState } from "react";
 //import AppConfig from "App.config";
 //import ExternalInfo from "components/ExternalInfo";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
 import { Button, Modal } from "react-bootstrap";
 
 const App = () => {
@@ -31,7 +30,7 @@ const App = () => {
           {/*  <Header title="Building OTP box using Hooks" />
 
     <ExternalInfo page="otpBox" />*/}
-    <button type="button" class="btn btn-primary" onClick = {show} data-toggle="modal" data-target="#exampleModal">
+    <button type="button" style={{margin:"auto"}}class="btn btn-primary" onClick = {show} data-toggle="modal" data-target="#exampleModal">
   PHONE VERIFICATION
 </button>
 
@@ -57,12 +56,12 @@ const App = () => {
                     {/*<div className="align-right">*/}
                   
                     {/*</div>*/}
-                    <div className="form-row">
+                    <div className="form-row" style={{display:"flex",flexDirection:"row"}}>
                     {otp.map((data, index) => {
                         return (
                             
                             <input
-                                style={{display:"inline"}}
+                                style={{width:"40px",}}
                 
                               //id="search-form"
                                 type="text"
@@ -79,7 +78,7 @@ const App = () => {
                         );
                     })}
                     </div>
-
+                  
                     <p>OTP Entered - {otp.join("")}</p>
                     <p>
                         <button
@@ -90,6 +89,7 @@ const App = () => {
                         </button>
                        
                     </p>
+                    
 
 
 
